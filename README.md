@@ -13,11 +13,14 @@ Setup
  * **brew install mongodb**
 * Navigate the command line into the project directory and run the following:
  * **npm install**
-   * This install all the dependencies in package.json
+   
+   This installs all the dependencies in package.json into a node_modules folder
 
 Running the application
 * Open two command line windows in the project's directory, and run each of the following in separate windows
  * **mongod** 
-    * This starts the MongoDB server locally on your computer
+  
+   This starts the MongoDB server locally on your computer
  * **node app.js**
-   * This starts the Node server, accessible at [http://localhost:3000](http://localhost:3000)
+   
+   This starts the Node server, accessible at [http://localhost:3000](http://localhost:3000)
