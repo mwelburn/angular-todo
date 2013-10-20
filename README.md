@@ -9,12 +9,11 @@ Installation (Mac OS X Instructions)
 ####Setup
 
 1. Install [brew](http://brew.sh/)
-* Open a command line and run the following:
- * **brew install node**
- * **brew install mongodb**
-* Navigate the command line into the project directory and run the following:
- * **npm install**
-   * This installs all the dependencies in package.json into a node_modules folder
+* Open a terminal window to install the following:
+ * Run the command: **brew install node**
+ * Run the command: **brew install mongodb**
+* Navigate the terminal window into the project directory to install the dependencies defined in package.json into the node_modules folder:
+ * Run the command: **npm install**
 
 ####Running the application
 
