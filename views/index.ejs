@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="ngTodo">
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.3/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.3/angular-route.min.js"></script>
+    <script src="/javascripts/app.js"></script>
+  </head>
+  <body ng-controller="todoCtrl">
+    <ul class="list-unstyled">
+      <li ng-repeat="todo in todos">
+        <input type="checkbox" ng-model="todo.Status"/>
+        <input ng-model="todo.Name"/>
+        <input type="button" class="btn btn-danger btn-xs" value="Delete" ng-click="removeTodo(todos, $index)"/>
+      </li>
+      <br/>
+      <input type="button" class="btn btn-primary btn-sm" value="Add" ng-click="addTodo(todos)"/>
+    </ul>
+  </body>
+</html>
