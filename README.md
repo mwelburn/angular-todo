@@ -3,11 +3,21 @@ Angular Todo Demo
 
 Simple demo application using MongoDB, NodeJS, and AngularJS to implement a Todo app.
 
-Installation
+Installation (Mac OS X Instructions)
 ----
 
-* Install node
-* Install mongo
-* Open the command line and run command: **npm install**
-* Run command: **mongod** 
-* Run command: **node app.js**
+Setup
+* Install [brew](http://brew.sh/)
+* Open a command line and run the following:
+ * **brew install node**
+ * **brew install mongodb**
+* Navigate the command line into the project directory and run the following:
+ * **npm install**
+   * This install all the dependencies in package.json
+
+Running the application
+* Open two command line windows in the project's directory, and run each of the following in separate windows
+ * **mongod** 
+    * This starts the MongoDB server locally on your computer
+ * **node app.js**
+   * This starts the Node server, accessible at [http://localhost:3000](http://localhost:3000)
