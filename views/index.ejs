@@ -11,8 +11,8 @@
   <body ng-controller="todoCtrl">
     <ul class="list-unstyled">
       <li ng-repeat="todo in todos">
-        <input type="checkbox" ng-model="todo.Status"/>
-        <input ng-model="todo.Name"/>
+        <input type="checkbox" ng-model="todo.Status" ng-change="update(todo)"/>
+        <input ng-model="todo.Name" ng-change="update(todo)"/>
         <input type="button" class="btn btn-danger btn-xs" value="Delete" ng-click="removeTodo(todos, $index)"/>
       </li>
       <br/>
