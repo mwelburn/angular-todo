@@ -65,7 +65,7 @@ exports.update = function(TodoModel){
 exports.delete = function(TodoModel){
   return function(req, res){
     return TodoModel.findById(req.params.id, function(err, todo){
-      return todo.delete(function(err){
+      return todo.remove(function(err){
         if (!err){
           console.log("deleted");
         } else {
