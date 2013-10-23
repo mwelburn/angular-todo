@@ -1,18 +1,30 @@
 <!DOCTYPE html>
 <html ng-app="ngTodo">
   <head>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=320, height=device-height, target-densitydpi=medium-dpi" />
     <title><%= title %></title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' type='text/css' href="/stylesheets/iphone.css" />
+    <!-- TODO - replace CDN with local -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.3/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.3/angular-route.min.js"></script>
     <script src="/javascripts/app.js"></script>
   </head>
   <body ng-controller="TodoCtrl">
+    <div class="nav">
+      <table>
+        <tr>
+          <th id="nav-settings">About</th>
+          <th id="nav-title">Todos</th>
+          <th id="nav-action" ng-click="addTodo(todos)">Add</th>
+        </tr>
+      </table>
+    </div>
     <ul class="list-unstyled">
       <li ng-repeat="todo in todos">
-        <input type="checkbox" ng-model="todo.Status" ng-change="update(todo)"/>
-        <input ng-model="todo.Name" ng-change="update(todo)"/>
+        <input type="checkbox" ng-model="todo.Status" ng-change="updateTodo(todo)"/>
+        <input ng-model="todo.Name" ng-change="updateTodo(todo)"/>
         <input type="button" class="btn btn-danger btn-xs" value="Delete" ng-click="removeTodo(todos, $index)"/>
       </li>
       <br/>

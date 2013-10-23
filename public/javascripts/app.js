@@ -20,6 +20,8 @@ function TodoCtrl($scope, $rootScope, $http)
     $http.post('/todos', $scope.newTodo).success(function(data)
     {
       console.log('created');
+
+      // need to wait to add it until we have an ID
       $scope.todos.push(data);  
     }).error(function(data)
     {
@@ -29,8 +31,9 @@ function TodoCtrl($scope, $rootScope, $http)
 
   $scope.removeTodo = function(array, index)
   {
+    // probably should wait to remove it until its gone from the backend...or keep track
     var todo = $scope.todos.splice(index, 1);
-    $http.delete('todos/' + todo[0]._id).success(function(data)
+    $http.delete('/todos/' + todo[0]._id).success(function(data)
     {
       console.log('deleted');
     }).error(function(data)
@@ -40,7 +43,7 @@ function TodoCtrl($scope, $rootScope, $http)
   };
 
   // Currently this is called on every keypress
-  $scope.update = function(todo)
+  $scope.updateTodo = function(todo)
   {
     $http.put('/todos/' + todo._id, todo).success(function(data)
     {
