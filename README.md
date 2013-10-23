@@ -22,7 +22,7 @@ Installation (Mac OS X Instructions)
 * Open a separate terminal window to start the Node server locally on your computer, accessible at [http://localhost:3000](http://localhost:3000)
  * Run the command: **node app.js**
 
- ####Running tests
+####Running tests
 
- 1. Jasmine tests
-  * Run the command: **./scripts/test.sh**
+1. Jasmine tests
+ * Run the command: **./scripts/test.sh**
