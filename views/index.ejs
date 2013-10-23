@@ -8,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.3/angular-route.min.js"></script>
     <script src="/javascripts/app.js"></script>
   </head>
-  <body ng-controller="todoCtrl">
+  <body ng-controller="TodoCtrl">
     <ul class="list-unstyled">
       <li ng-repeat="todo in todos">
         <input type="checkbox" ng-model="todo.Status" ng-change="update(todo)"/>

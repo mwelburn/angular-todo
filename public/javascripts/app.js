@@ -1,7 +1,9 @@
 var ngTodo = angular.module('ngTodo', []);
 
-function todoCtrl($scope, $rootScope, $http)
+function TodoCtrl($scope, $rootScope, $http)
 {
+  $scope.todos = [];
+
   // Initialize with existing items in the database
   $http.get('/todos').success(function(data)
   {
