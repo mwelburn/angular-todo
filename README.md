@@ -24,5 +24,7 @@ Installation (Mac OS X Instructions)
 
 ####Running tests
 
-1. Jasmine tests
+1. AngularJS Unit Tests
  * Run the command: **./scripts/test.sh**
+* AngularJS End to End Tests
+ * Run the command: **./scripts/e2e-test.sh**
